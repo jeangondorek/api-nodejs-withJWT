@@ -1,12 +1,54 @@
-# GitHub Codespaces ♥️ Express
+# GitHub Codespaces
 
-Welcome to your shiny new Codespace running Express! We've got everything fired up and running for you to explore Express.
+Necessário criar um arquivo na pasta `Config` chamado `config.js` com as seguntes configurações.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+- `bd_string` - String de conexão com o mongo
+- `jwt_pass` - Token/senha do jwt
+- `jwt_expires` - Tempo de expiração do token
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+EXEMPLO: 
 
-To run this application:
+```
+const env = process.env.NODE_ENV || 'dev';
+
+const config = () =>{
+    switch (env){
+        case 'dev':
+        return{
+            bd_string: "mongodb+srv://user:senha@cluster",
+            jwt_pass: "123",
+            jwt_expires: "7d"
+        }
+    }
+}
+
+console.log(`Iniciado api em ambiente ${env.toUpperCase()}`);
+
+module.exports = config();
+```
+
+### Rodando o projeto
+
+Projeto com 
+- EXPRESS
+- NODEMON
+- NODEJS
+- MONGOOSE
+- MONGO
+- BODYPARSER
+- BCRYPT
+- jsonwebtoken
+- SWAGGER
+
+Swagger implementado na rota `/docs`
+
+Comando para instalar dependecias
+
+```
+npm i
+```
+
+comando para rodar projeto 
 
 ```
 npm start
