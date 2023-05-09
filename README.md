@@ -1,6 +1,8 @@
 # Api with JWT
 ![MIT](https://img.shields.io/github/license/jeangondorek/api-rest-nodejs?style=for-the-badge)
 
+The same API that https://github.com/jeangondorek/api-node-jwt-ts, but using just NodeJs and JS.
+
 ## Tecnologias usadas
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
