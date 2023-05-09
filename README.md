@@ -13,7 +13,6 @@
 ![Jsonwebtoken](https://img.shields.io/badge/Jsonwebtoken-%23404d59.svg?style=for-the-badge&logo=Jsonwebtoken&logoColor=%2361DAFB)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Bodyparser](https://img.shields.io/badge/Bodyparser-%11100f20.svg?style=for-the-badge&logo=Bodyparser&logoColor=%23F7DF1E)
-![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
 
 ### Rodando o projeto

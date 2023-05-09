@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon App.js"
+    "start": "nodemon src/App.js"
   },
   "dependencies": {
     "@types/typescript": "^2.0.0",
