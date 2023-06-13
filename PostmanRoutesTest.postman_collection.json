@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "11e30c4b-d403-4a5c-a438-85918d909abf",
+		"_postman_id": "d6a9aaf9-d228-4482-83c0-62643e79a13f",
 		"name": "PostmanRoutesTest",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26614633"
@@ -13,7 +13,7 @@
 				"header": [
 					{
 						"key": "auth",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
@@ -130,7 +130,12 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "localhost:8080",
+			"value": "localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODg0ZWE2NzVmY2M1MWY3Y2Q0Y2RlZSIsImlhdCI6MTY4NjY1NDYzNiwiZXhwIjoxNjg3MjU5NDM2fQ.reOe4NHn5rAFrQ0Rkr-IUmquGtDXTaqAd5c_LbaeU_g",
 			"type": "string"
 		}
 	]
