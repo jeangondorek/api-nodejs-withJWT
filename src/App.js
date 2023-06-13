@@ -1,32 +1,30 @@
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocs = require("./swagger.json");
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocs = require('./swagger.json');
 
 const express = require('express')
 const app = express()
 const port = 3000
-const bodyParser = require("body-parser");
+const bodyParser = require('body-parser');
 const config = require('./Config/config');
 
-const url = config.bd_string;
+const mongoose = require('mongoose');
 
-const mongoose = require("mongoose");
-
-mongoose.connect(url);
+mongoose.connect(config.bd_string);
 
 mongoose.connection.on('error', (err)=>{
-    console.log("Erro na conexão", + err);
+    console.log('Erro na conexão', + err);
 })
 
 mongoose.connection.on('disconnected', ()=>{
-    console.log("App desconectada");
+    console.log('App desconectada');
 })
 
 mongoose.connection.on('connected', ()=>{
-    console.log("App connectada");
+    console.log('App connectada');
 })
 
 
-app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
