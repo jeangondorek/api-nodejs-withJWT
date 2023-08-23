@@ -5,10 +5,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 const bodyParser = require('body-parser');
-const config = require('./Config/config');
+const config = require('./Config/Config');
 
 const mongoose = require('mongoose');
-
 mongoose.connect(config.bd_string);
 
 mongoose.connection.on('error', (err)=>{
