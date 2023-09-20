@@ -15,30 +15,13 @@ The same API that [API NODE JWT TS](https://github.com/jeangondorek/api-node-jwt
 
 ### Rodando o projeto
 
-Necessário criar um arquivo na pasta `Config` chamado `config.js` com as seguntes configurações.
+Existe um arquivo .env-example onde devem colocar as váriaveis de ambiente. Sendo elas por exemplo:
 
-- `bd_string` - String de conexão com o mongo
-- `jwt_pass` - Token/senha do jwt
-- `jwt_expires` - Tempo de expiração do token
-
-EXEMPLO: 
-```
-const env = process.env.NODE_ENV || 'dev';
-
-const config = () =>{
-    switch (env){
-        case 'dev':
-        return{
-            bd_string: "mongodb+srv://user:senha@cluster",
-            jwt_pass: "123",
-            jwt_expires: "7d"
-        }
-    }
-}
-
-console.log(`Iniciado api em ambiente ${env.toUpperCase()}`);
-
-module.exports = config();
+```bash
+BD_STRING= -- pode ser uma url do mongo
+JWT_PASS= -- secret do jwt
+JWT_EXPIRES= -- tempo de expiração do jwt
+PORT= -- porta para rodar aplicação
 ```
 
 ### Instalando dependencias
