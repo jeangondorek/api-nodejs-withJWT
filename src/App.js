@@ -1,14 +1,15 @@
+require('dotenv').config()
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocs = require('./swagger.json');
-
 const express = require('express')
 const app = express()
-const port = 3000
 const bodyParser = require('body-parser');
-const config = require('./Config/Config');
+
+const port = process.env.PORT;
+const db_string = process.env.BD_STRING;
 
 const mongoose = require('mongoose');
-mongoose.connect(config.bd_string);
+mongoose.connect(db_string);
 
 mongoose.connection.on('error', (err)=>{
     console.log('Erro na conexão', + err);

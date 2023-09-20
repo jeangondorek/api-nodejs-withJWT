@@ -1,12 +1,15 @@
+require('dotenv').config()
 const express = require('express');
 const router = express.Router();
 const Users = require('../Model/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const config = require('../Config/Config');
+
+const jwt_pass = process.env.JWT_PASS;
+const jwt_expires = process.env.JWT_EXPIRES;
 
 const creatToken = (userId)=>{
-    return jwt.sign({ id: userId}, config.jwt_pass, {expiresIn: config.jwt_expires} );
+    return jwt.sign({ id: userId}, jwt_pass, {expiresIn: jwt_expires} );
 }
 
 router.get('/', (req, res) => {
