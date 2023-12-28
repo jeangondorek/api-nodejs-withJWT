@@ -4,6 +4,7 @@ const swaggerDocs = require('./swagger.json');
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const port = process.env.PORT;
 const db_string = process.env.BD_STRING;
@@ -23,7 +24,10 @@ mongoose.connection.on('connected', ()=>{
     console.log('App connectada');
 })
 
-
+app.use(cors({
+    origin: `process.env.CORS`,
+}));
+  
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(bodyParser.urlencoded({extended:false}));
